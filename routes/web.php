@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/request', function () {
+    return view('request');
 });
+
+// Basic Route
+Route::get('/index', function () {
+    return 'Hello World';
+});
+
+//controller route
+ 
+Route::get('/hello', [MyController::class, 'Hello'])->name('pageHello');
+

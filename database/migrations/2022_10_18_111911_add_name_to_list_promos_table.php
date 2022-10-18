@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('list_promos', function (Blueprint $table) {
-            $table->id();
+        Schema::table('list_promos', function (Blueprint $table) {
+            //
             $table->string("name");
-            $table->string("age");
-            $table->timestamps();
         });
     }
 
@@ -28,6 +26,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('list_promos');
+        Schema::table('list_promos', function (Blueprint $table) {
+        });
     }
 };
