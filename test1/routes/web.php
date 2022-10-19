@@ -19,14 +19,27 @@ Route::get('/request', function () {
 
 // Basic Route
 Route::get('/index', function () {
-    return 'Hello World';
+    return 'Hello world';
 });
 
 Route::get('/welcome', function () {
     return view('welcome');
 });
 
+
+
+// Route parameters
+
+Route::get('/details/{id}', function ($id) {
+    //use the id variable to query the db for a record
+    return view('list', ['id' => $id]);
+});
+
+
+
+
 //controller route
  
-Route::get('/hello', [MyController::class, 'Hello'])->name('pageHello');
+// Route::get('/hello', [MyController::class, 'Hello'])->name('pageHello');
+
 
