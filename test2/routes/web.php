@@ -18,11 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/testcontroller', [testController::class, 'test']);
+Route::get('/test', [testController::class, 'test']);
 
 // select request 
 
 Route::get('/s', [testController::class, 'show']);
 
-
+Route::post('/insert', [testController::class, 'enter_data'])->name('insert_query');
 

@@ -16,4 +16,11 @@ class testController extends Controller
         $data = testModel::all();
         return view('show', compact('data'));
     }
+
+    public function enter_data(Request $add){
+        $myModel = new testModel();
+        $myModel->name = $add->name;
+        $myModel->save();
+        return redirect('/s');
+    }
 }
