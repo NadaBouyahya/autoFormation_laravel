@@ -28,3 +28,10 @@ Route::get('/hello', function () {
 Route::any('/myForm', function() {
     return "goodbye world";
 }); 
+
+
+
+// route parameters 
+Route::get('/cyberGang{id?},{name?}', function($id='1', $name="Amine Salmi") {
+    return "<h2> number ". $id . " in the list is " . $name . " <h2> ";
+});
