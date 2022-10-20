@@ -34,6 +34,6 @@ use Illuminate\Support\Facades\Route;
 //     return "<h2> number ". $id . " in the list is " . $name . " <h2>";
 // });
 
-Route::get('/test', [testController::class, 'show']);
+Route::get('/test', [testController::class, 'index']);
 
 Route::get('/hi', [testController::class, 'hello']);

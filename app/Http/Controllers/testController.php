@@ -14,7 +14,7 @@ class testController extends Controller
      */
     public function index()
     {
-        //
+        return view('/form');
     }
 
     /**
@@ -82,10 +82,6 @@ class testController extends Controller
     // {
     //     //
     // }
-
-    public function show(){
-       return view('/form');
-    }
 
     public function hello() {
         return "<h1>hello world</h1>";
