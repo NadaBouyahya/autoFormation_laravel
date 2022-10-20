@@ -19,17 +19,21 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::get('/hello', function () {
-    return view('form');
-});
+// Route::get('/hello', function () {
+//     return view('form');
+// });
 
-Route::any('/myForm', function() {
-    return "goodbye world";
-}); 
+// Route::any('/myForm', function() {
+//     return "goodbye world";
+// }); 
 
 
 
-// route parameters 
-Route::get('/cyberGang{id?},{name?}', function($id='1', $name="Salmi Amine") {
-    return "<h2> number ". $id . " in the list is " . $name . " <h2>";
-});
+// // route parameters 
+// Route::get('/cyberGang{id?},{name?}', function($id='1', $name="Salmi Amine") {
+//     return "<h2> number ". $id . " in the list is " . $name . " <h2>";
+// });
+
+Route::get('/test', [testController::class, 'show']);
+
+Route::get('/hi', [testController::class, 'hello']);
