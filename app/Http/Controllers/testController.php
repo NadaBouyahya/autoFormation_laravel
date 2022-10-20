@@ -24,7 +24,8 @@ class testController extends Controller
      */
     public function create()
     {
-        //
+        return "<h1>hello world</h1>";
+
     }
 
     /**

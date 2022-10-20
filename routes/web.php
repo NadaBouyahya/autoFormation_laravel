@@ -36,4 +36,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/test', [testController::class, 'index']);
 
-Route::get('/hi', [testController::class, 'hello']);
+Route::get('/hi', [testController::class, 'create']);
