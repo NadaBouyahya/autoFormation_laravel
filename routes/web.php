@@ -14,8 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+Route::get('/hello', function () {
+    return view('form');
 });
 
+Route::any('/myForm', function() {
+    return "goodbye world";
+}); 
 
+
+
+// route parameters 
+Route::get('/cyberGang{id?},{name?}', function($id='1', $name="Salmi Amine") {
+    return "<h2> number ". $id . " in the list is " . $name . " <h2>";
+});
