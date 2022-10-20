@@ -14,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//hello
+
+// Route::get('/hello', function () {
+//     return "hello world";
+// });
+
+
 Route::get('/hello', function () {
-    return "hello world";
+    return view('form');
 });
+
+Route::any('/myForm', function() {
+    return "goodbye world";
+}); 
