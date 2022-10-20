@@ -32,6 +32,6 @@ Route::any('/myForm', function() {
 
 
 // route parameters 
-Route::get('/cyberGang{id?},{name?}', function($id='1', $name="Amine Salmi") {
+Route::get('/cyberGang{id?},{name?}', function($id='1', $name="Salmi Amine") {
     return "<h2> number ". $id . " in the list is " . $name . " <h2> ";
 });
