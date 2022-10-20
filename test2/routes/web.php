@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/testcontroller', [testController::class, 'test']);
 
-// add request 
+// select request 
 
 Route::get('/s', [testController::class, 'show']);
 
