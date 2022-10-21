@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\promotions_controller;
-use App\Http\Controllers\testController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 /*
@@ -18,5 +17,7 @@ use Illuminate\Http\Request;
 Route::get('/index', [promotions_controller::class, 'create']);
 Route::get('/form', [promotions_controller::class, 'insert_form']);
 Route::post('/insert', [promotions_controller::class, 'insert_data']);
+
+Route::get('/edit/{id}', [promotions_controller::class, 'selectBy_id']);
 
 

@@ -25,4 +25,9 @@ class promotions_controller extends Controller
         return redirect('/index');
     }
 
+    public function selectBy_id($id_parametre){
+        $promotion = Promotion::where('id', $id_parametre)->get();
+        return view('edit_form', compact('promotion'));
+    }
+
 }
