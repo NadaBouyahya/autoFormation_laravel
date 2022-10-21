@@ -24,4 +24,5 @@ class promotions_controller extends Controller
 
         return redirect('/index');
     }
+
 }
