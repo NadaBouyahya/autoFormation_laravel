@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\testController;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,3 +37,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/test', [testController::class, 'index']);
 
 Route::get('/hi', [testController::class, 'create']);
+
+
+//route 'request'
+Route::get('/req', [testController::class, 'store']); // browser --http://127.0.0.1:8000/req?name=hiii //
+

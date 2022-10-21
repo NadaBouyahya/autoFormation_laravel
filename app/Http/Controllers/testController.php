@@ -28,6 +28,14 @@ class testController extends Controller
 
     }
 
+
+
+
+
+    //
+
+
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -36,7 +44,9 @@ class testController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $name = $request->input('name');
+
+        return $name;
     }
 
     /**
