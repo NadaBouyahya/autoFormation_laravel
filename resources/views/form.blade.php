@@ -1,4 +1,4 @@
-<form action="/myForm" method="POST">
+<form action="/insert" method="POST">
 
 @csrf
 <input type="text" name="name">

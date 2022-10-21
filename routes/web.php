@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\promotions_controller;
 use App\Http\Controllers\testController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -14,31 +15,8 @@ use Illuminate\Http\Request;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/index', [promotions_controller::class, 'create']);
+Route::get('/form', [promotions_controller::class, 'insert_form']);
+Route::post('/insert', [promotions_controller::class, 'insert_data']);
 
-
-// Route::get('/hello', function () {
-//     return view('form');
-// });
-
-// Route::any('/myForm', function() {
-//     return "goodbye world";
-// }); 
-
-
-
-// // route parameters 
-// Route::get('/cyberGang{id?},{name?}', function($id='1', $name="Salmi Amine") {
-//     return "<h2> number ". $id . " in the list is " . $name . " <h2>";
-// });
-
-Route::get('/test', [testController::class, 'index']);
-
-Route::get('/hi', [testController::class, 'create']);
-
-
-//route 'request'
-Route::get('/req', [testController::class, 'store']); // browser --http://127.0.0.1:8000/req?name=hiii //
 
