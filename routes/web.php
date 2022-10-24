@@ -18,6 +18,6 @@ Route::get('/index', [promotions_controller::class, 'create']);
 Route::get('/form', [promotions_controller::class, 'insert_form']);
 Route::post('/insert', [promotions_controller::class, 'insert_data']);
 
-Route::get('/edit/{id}', [promotions_controller::class, 'selectBy_id']);
+Route::get('/edit_form/{id}', [promotions_controller::class, 'selectBy_id']);
 
-
+Route::post('/edit/{id}', [promotions_controller::class, 'save_edit']);

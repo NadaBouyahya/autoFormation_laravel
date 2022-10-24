@@ -30,4 +30,15 @@ class promotions_controller extends Controller
         return view('edit_form', compact('promotion'));
     }
 
+    public function save_edit(Request $request, $id){
+        $promotion = Promotion::where('id', $id)->first();
+        $promotion->name = $request->name;
+        $promotion->save();
+
+        return redirect('/index');
+
+    }
+
 }
+
+

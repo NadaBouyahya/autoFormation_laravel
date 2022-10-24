@@ -7,8 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-        <form action="/insert" method="POST">
-            <input type="text" value="{{$promotion[0]->name}}">
+        <form action="/edit/{{$promotion[0]->id}}" method="POST">
+            @csrf
+            <input type="text" name='name' value="{{$promotion[0]->name}}">
+            <button type="submit">save</button>
         </form>
 </body>
 </html>
