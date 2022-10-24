@@ -39,6 +39,9 @@ class promotions_controller extends Controller
 
     }
 
+    public function search_data($name){
+        return "ok";
+    }
 }
 
 

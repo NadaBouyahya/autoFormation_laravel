@@ -21,3 +21,7 @@ Route::post('/insert', [promotions_controller::class, 'insert_data']);
 Route::get('/edit_form/{id}', [promotions_controller::class, 'selectBy_id']);
 
 Route::post('/edit/{id}', [promotions_controller::class, 'save_edit']);
+
+//search
+
+Route::get('/search/{name}', [promotions_controller::class, 'search_data']);
