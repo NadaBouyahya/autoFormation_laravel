@@ -39,8 +39,17 @@ class promotions_controller extends Controller
 
     }
 
-    public function search_data($name){
-        return "ok";
+    public function search_data($name=null){
+        if($name == null){
+            $promotion = Promotion::all();
+            return view('search_result', compact('promotion'));
+        }
+
+        else{
+            $promotion = Promotion::where('name', 'like',  "%$name%")->get();
+            return view('search_result', compact('promotion'));
+        }
+
     }
 }
 

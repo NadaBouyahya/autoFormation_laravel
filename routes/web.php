@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\promotions_controller;
+use App\Models\Promotion;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 /*
@@ -24,4 +25,5 @@ Route::post('/edit/{id}', [promotions_controller::class, 'save_edit']);
 
 //search
 
-Route::get('/search/{name}', [promotions_controller::class, 'search_data']);
+Route::get('/index_search', [promotions_controller::class, 'search_data']);
+Route::get('/index_search/{name}', [promotions_controller::class, 'search_data']);

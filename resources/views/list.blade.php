@@ -10,7 +10,7 @@
 
 <body>
     <input type="text" id="search" placeholder="search">
-    <ul>
+    <ul id="data_list">
         @foreach ($promotions as $row)
             <li> {{ $row->name }} <a href="/edit_form/{{ $row->id }}">edit</a></li>
         @endforeach
