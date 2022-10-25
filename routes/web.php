@@ -16,7 +16,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/index', [promotions_controller::class, 'create']);
-Route::get('/form', [promotions_controller::class, 'insert_form']);
+Route::get('/form', [promotions_controller::class, 'insert_form'])->name('add_promotion');
 Route::post('/insert', [promotions_controller::class, 'insert_data']);
 
 Route::get('/edit_form/{id}', [promotions_controller::class, 'selectBy_id']);

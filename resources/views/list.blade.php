@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <a href="{{route('add_promotion')}}">Ajouter promotion</a>
     <input type="text" id="search" placeholder="search">
     <ul id="data_list">
         @foreach ($promotions as $row)
