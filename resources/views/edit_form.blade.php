@@ -7,10 +7,32 @@
     <title>Document</title>
 </head>
 <body>
-        <form action="/edit/{{$promotion[0]->id}}" method="POST">
+        <form action="/edit/{{$new_data[0]->id_promotion}}" method="POST">
             @csrf
-            <input type="text" name='name' value="{{$promotion[0]->name}}">
+            <input type="text" name='name' value="{{$new_data[0]->name}}">
             <button type="submit">save</button>
         </form>
+
+        
+    <table>
+        <thead>
+            <th>Prénom</th>
+            <th>nom</th>
+            <th>email</th>
+            <th>paramétres</th>
+        </thead>
+
+        <tbody>
+            @foreach ($new_data as $row)
+                <tr>
+                    <td>{{ $row->prénom }}</td>
+                    <td>{{ $row->nom }}</td>
+                    <td>{{ $row->email }}</td>
+                    <td><a href="/edit_form/{{ $row->id }}">edit</a></td>
+                </tr>
+            @endforeach
+
+        </tbody>
+    </table>
 </body>
 </html>

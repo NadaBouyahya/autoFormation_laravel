@@ -30,6 +30,13 @@ Route::get('/index_search', [promotions_controller::class, 'search_data']);
 Route::get('/index_search/{name}', [promotions_controller::class, 'search_data']);
 
 
-//show students list 
+//add student view
+Route::get('/student_form', [students_controller::class, 'form_students']);
 
-Route::get('/index_students', [students_controller::class, 'show_students']);
+
+
+// insert student 
+// Route::post('/insert_student', [students_controller::class, 'add_student']);
+
+//show students list 
+// Route::get('/index_students', [students_controller::class, 'show_students']);

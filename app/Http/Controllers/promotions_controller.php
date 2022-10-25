@@ -25,10 +25,25 @@ class promotions_controller extends Controller
         return redirect('/index');
     }
 
-    public function selectBy_id($id_parametre){
-        $promotion = Promotion::where('id', $id_parametre)->get();
-        return view('edit_form', compact('promotion'));
+    public function selectBy_id($id_aprr){
+        $new_data = Promotion::select(
+            'promotions.id as id_promotion',
+            'students.id as id_student',
+            'name',
+            'prénom',
+            'nom',
+            'email'
+        )
+        ->leftJoin('students', 'promotions.id', '=', 'students.promo_id')
+        ->where('students.id', $id_aprr)
+        ->get();
+
+        return view('edit_form', compact('new_data'));
     }
+    // public function selectBy_id($id_parametre){
+    //     $promotion = Promotion::where('id', $id_parametre)->get();
+    //     return view('edit_form', compact('promotion'));
+    // }
 
     public function save_edit(Request $request, $id){
         $promotion = Promotion::where('id', $id)->first();
