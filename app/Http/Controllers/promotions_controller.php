@@ -25,7 +25,7 @@ class promotions_controller extends Controller
         return redirect('/index');
     }
 
-    public function selectBy_id($id_aprr){
+    public function selectBy_id($id_prom){
         $new_data = Promotion::select(
             'promotions.id as id_promotion',
             'students.id as id_student',
@@ -35,7 +35,7 @@ class promotions_controller extends Controller
             'email'
         )
         ->leftJoin('students', 'promotions.id', '=', 'students.promo_id')
-        ->where('students.id', $id_aprr)
+        ->where('promotions.id', $id_prom)
         ->get();
 
         return view('edit_form', compact('new_data'));

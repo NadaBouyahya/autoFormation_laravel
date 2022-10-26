@@ -9,18 +9,20 @@ use Illuminate\Http\Request;
 class students_controller extends Controller
 {
 
-    public function form_students(){
-        return view('add_students');
+    public function form_students($id){
+        $id_promo = $id;
+        return view('add_students', compact('id_promo'));
     }
 
     public function add_student(request $request){
-        $students = new Student();
-        $students->prénom = $request->prénom;
-        $students->nom = $request->nom;
-        $students->email = $request->email;
+        $new_student = new Student();
+        $new_student->prénom = $request->fname;
+        $new_student->nom = $request->lname;
+        $new_student->email = $request->email;
+        $new_student->promo_id = $request->promo_id;
 
-        $students->save();
-
+        $new_student->save();
+        redirect("/index");
 
     }
 

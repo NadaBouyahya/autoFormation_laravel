@@ -31,12 +31,12 @@ Route::get('/index_search/{name}', [promotions_controller::class, 'search_data']
 
 
 //add student view
-Route::get('/student_form', [students_controller::class, 'form_students']);
+Route::get('/student_form/{id}', [students_controller::class, 'form_students'])->name('add_student');
 
 
 
 // insert student 
-// Route::post('/insert_student', [students_controller::class, 'add_student']);
+Route::post('/insert_student', [students_controller::class, 'add_student']);
 
 //show students list 
 // Route::get('/index_students', [students_controller::class, 'show_students']);

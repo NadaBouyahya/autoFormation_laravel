@@ -13,7 +13,8 @@
             <button type="submit">save</button>
         </form>
 
-        
+        <a href="{{route('add_student', ['id'=>$new_data[0]->id_promotion])}}">Ajouter apprenant</a>
+
     <table>
         <thead>
             <th>Prénom</th>
@@ -28,7 +29,7 @@
                     <td>{{ $row->prénom }}</td>
                     <td>{{ $row->nom }}</td>
                     <td>{{ $row->email }}</td>
-                    <td><a href="/edit_form/{{ $row->id }}">edit</a></td>
+                    <td><a href="/edit_form/{{ $row->id_student }}">edit</a></td>
                 </tr>
             @endforeach
 
