@@ -48,4 +48,12 @@ class students_controller extends Controller
         // redirect("/index");
     }
 
+    public function delete_student($id_row){
+        $target = student::where('id', $id_row)->get();
+        $id_promo = $target->promo_id;
+        $target->delete();
+        redirect("/edit_form/{$id_promo}");
+
+    }
+
 }

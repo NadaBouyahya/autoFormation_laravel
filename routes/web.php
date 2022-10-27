@@ -47,3 +47,7 @@ Route::get('/edit_student_form/{id}', [students_controller::class, 'edit_student
 // save students modification
 
 Route::post('/student_saved/{id}', [students_controller::class, 'update_student']);
+
+// delete student
+
+Route::get('/student_deleted/{id}', [students_controller::class, 'delete_student']);
