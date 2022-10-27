@@ -19,7 +19,9 @@ return new class extends Migration
             $table->string('nom');
             $table->string('email');
             $table->unsignedBigInteger('promo_id');
-            $table->foreign('promo_id')->references('id')->on('promotions');
+            $table->foreign('promo_id')->references('id')->on('promotions')
+            ->constrained()
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }
