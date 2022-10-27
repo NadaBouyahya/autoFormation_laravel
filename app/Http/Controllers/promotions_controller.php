@@ -67,6 +67,12 @@ class promotions_controller extends Controller
 
     }
 
+    public function delet_promotion($id_promo){
+        $targeted_promo = Promotion::where('id', $id_promo);
+        $targeted_promo->delete();
+        return redirect('/index');
+    }
+
 }
 
 

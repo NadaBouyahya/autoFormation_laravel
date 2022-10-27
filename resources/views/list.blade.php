@@ -13,7 +13,7 @@
     <input type="text" id="search" placeholder="search">
     <ul id="data_list">
         @foreach ($promotions as $row)
-            <li> {{ $row->name }} <a href="/edit_form/{{ $row->id }}">edit</a></li>
+            <li> {{ $row->name }} <a href="/edit_form/{{ $row->id }}">edit</a> <a href="/delet_promo/{{ $row->id }}">delete</a></li>
         @endforeach
     </ul>
     <script src="{{URL::asset('js/script.js')}}"></script>

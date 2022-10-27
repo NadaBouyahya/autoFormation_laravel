@@ -29,6 +29,9 @@ Route::post('/edit/{id}', [promotions_controller::class, 'save_edit']);
 Route::get('/index_search', [promotions_controller::class, 'search_data']);
 Route::get('/index_search/{name}', [promotions_controller::class, 'search_data']);
 
+//delete promotion 
+Route::get('/delet_promo/{id}', [promotions_controller::class, 'delet_promotion']);
+
 
 //add student view
 Route::get('/student_form/{id}', [students_controller::class, 'form_students'])->name('add_student');

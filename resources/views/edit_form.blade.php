@@ -17,8 +17,8 @@
 
     <table>
         <thead>
-            <th>Prénom</th>
             <th>nom</th>
+            <th>prénom</th>
             <th>email</th>
             <th>paramétres</th>
         </thead>

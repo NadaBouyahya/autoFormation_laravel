@@ -45,14 +45,14 @@ class students_controller extends Controller
         $updated_student->promo_id = $request->promo_id;
         $updated_student->save();
         
-        // redirect("/index");
+        return redirect("/edit_form/{$updated_student->promo_id}");
     }
 
     public function delete_student($id_row){
         $target = student::where('id', $id_row)->get();
-        $id_promo = $target->promo_id;
-        $target->delete();
-        redirect("/edit_form/{$id_promo}");
+        $id_promo = $target[0]->promo_id;
+        $target[0]->delete();
+        return redirect("/edit_form/{$id_promo}");
 
     }
 
