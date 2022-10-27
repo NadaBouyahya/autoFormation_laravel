@@ -18,17 +18,17 @@
     <section id="main_content">
         <h1>Les Promotions</h1>
         <div id="first_div">
-            <input type="text" id="search" placeholder="search">
+            <input type="text" id="search" placeholder="rechercher apprenant">
             <a href="{{ route('add_promotion') }}">Ajouter promotion</a>
         </div>
         <div id="second_div">
-            <table class="promotion_table table table-striped">
+            <table id="promotion_table" class="table table-striped">
                 <thead>
                     <th>Promotion</th>
                     <th>Parametres</th>
                 </thead>
 
-                <tbody>
+                <tbody id="promotion_data">
                     @foreach ($promotions as $row)
                         <tr>
                             <td>{{ $row->name }}</td>

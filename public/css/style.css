@@ -7,18 +7,37 @@
 #first_div{
     display: flex;
     flex-direction: row-reverse;
+    margin-top: 60px;
+}
+#first_div input{
+    width: 300px;
+    height: 57px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-left: 100px;
+}
+
+#first_div a{
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 250px;
+
 }
 
 #second_div{
     width: 70%;
 }
 
-.promotion_table{
+#promotion_table{
     font-size: 25px;
     margin-top: 60px;
 }
 
-.promotion_table th,td{
+#promotion_table th,td{
     text-align: center;
 }
 
