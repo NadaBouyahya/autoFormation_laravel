@@ -1,0 +1,28 @@
+#main_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#first_div{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#second_div{
+    width: 70%;
+}
+
+.promotion_table{
+    font-size: 25px;
+    margin-top: 60px;
+}
+
+.promotion_table th,td{
+    text-align: center;
+}
+
+#promotions_setting a{
+    text-decoration: none;
+    margin: 15px;
+}
