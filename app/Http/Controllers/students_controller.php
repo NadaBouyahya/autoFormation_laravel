@@ -31,8 +31,10 @@ class students_controller extends Controller
     //     return view('studentsList', compact('students'));
     // }
 
-    public function edit_promo(){
-        
+    public function edit_student_view($id){
+        $id_student = $id;
+        $student = Student::where('id', $id_student)->first();
+        return view('edit_form_student', compact('student'));
     }
 
 }

@@ -40,3 +40,6 @@ Route::post('/insert_student', [students_controller::class, 'add_student']);
 
 //show students list 
 // Route::get('/index_students', [students_controller::class, 'show_students']);
+
+// edit student view
+Route::get('/edit_student_form/{id}', [students_controller::class, 'edit_student_view']);

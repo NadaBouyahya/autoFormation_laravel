@@ -29,7 +29,7 @@
                     <td>{{ $row->prénom }}</td>
                     <td>{{ $row->nom }}</td>
                     <td>{{ $row->email }}</td>
-                    <td><a href="/edit_form/{{ $row->id_student }}">edit</a></td>
+                    <td><a href="/edit_student_form/{{ $row->id_student }}">edit</a></td>
                 </tr>
             @endforeach
 
