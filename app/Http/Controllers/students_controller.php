@@ -37,4 +37,15 @@ class students_controller extends Controller
         return view('edit_form_student', compact('student'));
     }
 
+    public function update_student(Request $request, $id_student){
+        $updated_student = Student::where('id', $id_student)->first();
+        $updated_student->nom = $request->lname;
+        $updated_student->prénom = $request->fname;
+        $updated_student->email = $request->email;
+        $updated_student->promo_id = $request->promo_id;
+        $updated_student->save();
+        
+        // redirect("/index");
+    }
+
 }

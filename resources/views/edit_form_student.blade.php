@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="POST">
+    <form action="/student_saved/{{$student->id}}" method="POST">
         @csrf
     
         <label for="lname">nom:</label> <input type="text" name="lname" value="{{$student->nom}}">
@@ -15,7 +15,7 @@
         <label for="email">email:</label> <input type="text" name="email" value="{{$student->email}}">
         <input type="hidden" name="promo_id" value="{{$student->promo_id}}">
     
-        <input type="submit" name="submit">
+        <input type="submit" name="submit" value="enregistrer">
     
     </form>
 </body>

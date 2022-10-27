@@ -41,5 +41,9 @@ Route::post('/insert_student', [students_controller::class, 'add_student']);
 //show students list 
 // Route::get('/index_students', [students_controller::class, 'show_students']);
 
-// edit student view
+// show edit student view
 Route::get('/edit_student_form/{id}', [students_controller::class, 'edit_student_view']);
+
+// save students modification
+
+Route::post('/student_saved/{id}', [students_controller::class, 'update_student']);
