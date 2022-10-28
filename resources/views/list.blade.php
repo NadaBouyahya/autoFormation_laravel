@@ -21,8 +21,9 @@
             <input type="text" id="search" placeholder="rechercher apprenant">
             <a href="{{ route('add_promotion') }}">Ajouter promotion</a>
         </div>
+
         <div id="second_div">
-            <table id="promotion_table" class="table table-striped">
+            <table id="promotion_table" class="table table-striped table-borderless">
                 <thead>
                     <th>Promotion</th>
                     <th>Parametres</th>

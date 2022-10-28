@@ -22,7 +22,7 @@ class students_controller extends Controller
         $new_student->promo_id = $request->promo_id;
 
         $new_student->save();
-        redirect("/index");
+        return redirect("edit_form/{$new_student->promo_id}");
 
     }
 
