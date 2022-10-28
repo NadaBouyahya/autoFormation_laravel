@@ -26,10 +26,7 @@
     background-color: rgba(241, 157, 143, 0.791);
     border-radius: 5px;
     padding: 10px;
-    /* margin-right: 250px; */
     margin-left: 400px;
-
-
 }
 
 #second_div {
@@ -43,7 +40,6 @@
     --bs-table-striped-bg: rgba(247, 244, 237, 0.694);
     --bs-table-accent-bg: rgba(173, 197, 195, 0.382);
     /* box-shadow: 5px 5px 5px red; */
-
 }
 
 #promotion_table tr:last-child td:first-child {
@@ -122,12 +118,7 @@ td {
 
 }
 
-/* #add_student_link {
-    text-decoration: none;
-    font-size: 30px;
-    margin-left: 400px;
-    background-color: rgba(162, 73, 65, 0.574);
-    border-radius: 5px;
-    padding: 8px 15px;
+#add_student_link {
+    color: black;
 
-} */
+}
