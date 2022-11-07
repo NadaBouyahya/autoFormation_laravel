@@ -14,15 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/test', [testController::class, 'test']);
+// Route::get('/test', [testController::class, 'test']);
 
-// select request 
+// // select request 
 
-Route::get('/s', [testController::class, 'show']);
+// Route::get('/s', [testController::class, 'show']);
 
-Route::post('/insert', [testController::class, 'enter_data'])->name('insert_query');
+// Route::post('/insert', [testController::class, 'enter_data'])->name('insert_query');
 

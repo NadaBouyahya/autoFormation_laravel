@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('phones', function (Blueprint $table) {
-            $table->bigIncrements('id_phone');
-            $table->string('phone_number');
-            
-            $table->unsignedBigInteger('id_student_phone');
-            $table->foreign('id_student_phone')->references('id_friend')->on('friends');
+        Schema::create('friends', function (Blueprint $table) {
+            $table->bigIncrements('id_friend');
+            $table->string('name');
+            $table->unsignedBigInteger('id_city');
+
+            $table->foreign('id_city')->references('city_id')->on('cities')->constrained()->onDelete('cascade');
+
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('phones');
+        Schema::dropIfExists('friends');
     }
 };
