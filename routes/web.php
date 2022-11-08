@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\friends_controller;
+use App\Http\Controllers\phones_controller;
 use App\Http\Controllers\testController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,15 +16,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/test', [testController::class, 'test']);
+// Route::get('/test', [testController::class, 'test']);
 
-// select request 
+// // select request 
 
-Route::get('/s', [testController::class, 'show']);
+// Route::get('/s', [testController::class, 'show']);
 
-Route::post('/insert', [testController::class, 'enter_data'])->name('insert_query');
+// Route::post('/insert', [testController::class, 'enter_data'])->name('insert_query');
 
+Route::get('/phone', [phones_controller::class, 'display_phone']);
+// Route::get('/friend', function(){
+//     return "test";
+// });
+Route::get('/friend', [friends_controller::class, 'display_friend']);
