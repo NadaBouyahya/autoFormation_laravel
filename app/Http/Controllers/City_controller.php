@@ -11,7 +11,6 @@ class City_controller extends Controller
     public function show_cityCitizens(){
         $city = Cities::where('city_id', 1)->first();
         $city->citizen;
-        
         // return $city;
 
         return view('city_citizens', compact('city'));
