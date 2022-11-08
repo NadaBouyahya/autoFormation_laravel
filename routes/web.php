@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\testController;
 use App\Http\Controllers\Citizen_controller;
+use App\Http\Controllers\City_controller;
 use App\Models\citizen;
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +30,5 @@ use Illuminate\Support\Facades\Route;
 // Route::post('/insert', [testController::class, 'enter_data'])->name('insert_query');
 
 Route::get('/citizen', [Citizen_controller::class, 'show']);
+
+Route::get('/city', [City_controller::class, 'show_cityCitizens']);
