@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\testController;
+use App\Http\Controllers\Citizen_controller;
+use App\Models\citizen;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +28,4 @@ use Illuminate\Support\Facades\Route;
 
 // Route::post('/insert', [testController::class, 'enter_data'])->name('insert_query');
 
+Route::get('/citizen', [Citizen_controller::class, 'show']);
