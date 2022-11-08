@@ -14,6 +14,6 @@ class City_controller extends Controller
         
         // return $city;
 
-        return view('city.citizens', compact('city'));
+        return view('city_citizens', compact('city'));
     }
 }

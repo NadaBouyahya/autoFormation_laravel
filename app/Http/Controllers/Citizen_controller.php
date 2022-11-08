@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class Citizen_controller extends Controller
 {
     public function show(){
-        $citizen = citizen::where('id_city', 2)->first();
+        $citizen = citizen::where('id_city', 1)->first();
         return $citizen;
     }
 }
